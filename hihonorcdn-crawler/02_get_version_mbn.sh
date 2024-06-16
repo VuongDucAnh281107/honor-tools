@@ -25,7 +25,7 @@ worker() {
         mbn_version=$(./update_zip_version_mbn.py "http://update.hihonorcdn.com/TDS/data/bl/files/$version/f1/full/$fname")
         echo "Found version: $mbn_version"
         if [ "x$mbn_version" != 'x' ]; then
-            echo "$mbn_version" > "${xml}.version_mbn"
+            echo "$version $mbn_version $fname" > "${xml}.version_mbn"
         fi
     done
 }
